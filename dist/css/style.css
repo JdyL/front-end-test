@@ -1,0 +1,29 @@
+/*
+ grunt-basic 2018-07-17 
+*/
+#taste-content-main {
+  background-color: #0e1414;
+  color: #ffffff;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+p {
+  text-transform: capitalize;
+}
+.row .col-md-4 {
+  padding: 4px;
+}
+.row .col-md-4 .custom-taste-card {
+  background-color: transparent;
+  border: none;
+}
+.row .col-md-4 .custom-taste-card .card-body {
+  padding: 0px;
+  margin: 0px;
+}

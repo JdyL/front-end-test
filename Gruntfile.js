@@ -2,9 +2,12 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         less: {
+            options: {
+                banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
+            },
             build: {
                 files: {
-                    'dist/css/pretty.css': 'src/css/pretty.less'
+                    'dist/css/style.css': 'src/css/style.less'
                 }
             }
         },
@@ -14,7 +17,7 @@ module.exports = function (grunt) {
             },
             build: {
                 files: {
-                    'dist/js/magic.min.js': 'src/js/magic.js'
+                    'dist/js/script.min.js': 'src/js/script.js'
                 }
             }
         }
@@ -22,4 +25,5 @@ module.exports = function (grunt) {
 
     });
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 };
