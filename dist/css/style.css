@@ -1,5 +1,5 @@
 /*
- grunt-basic 2018-07-17 
+ grunt-basic 2018-07-18 
 */
 @font-face {
   font-family: 'Roboto';
@@ -59,6 +59,16 @@ p {
 section {
   padding: 30px 0px;
 }
+.bolded-eyecatch {
+  font-weight: 500;
+  font-size: 18px;
+}
+.red-text {
+  color: #e94d4d;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1px;
+}
 .row .col-md-4 {
   padding: 4px;
 }
@@ -78,13 +88,23 @@ section {
   width: 280px;
   margin: 0 auto;
 }
+#taste-the-colours-section .container .row .col-md-8 {
+  padding-right: 15px;
+}
 #taste-the-colours-section .container .row .col-md-8 .row .col-6 {
   padding: 0px;
 }
 #taste-the-colours-section .container .row .col-md-8 .row .col-6 img {
   padding: 5px;
 }
+#taste-the-colours-section .container .row .col-md-4 {
+  text-align: left;
+  padding-left: 15px;
+}
+#taste-the-colours-section .container .row .col-md-4 section {
+  padding: 0px;
+  padding-bottom: 15px;
+}
 #taste-the-colours-section .container .row .col-md-4 h1 {
   margin-top: 0px;
-  text-align: left;
 }
