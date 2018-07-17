@@ -27,3 +27,9 @@ p {
   padding: 0px;
   margin: 0px;
 }
+#taste-the-colours-section .container .row .col-md-8 .row .col-6 {
+  padding: 0px;
+}
+#taste-the-colours-section .container .row .col-md-8 .row .col-6 img {
+  padding: 5px;
+}
