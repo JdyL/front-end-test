@@ -1,20 +1,63 @@
 /*
  grunt-basic 2018-07-17 
 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v18/KFOkCnqEu92Fr1MmgVxIIzc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
 #taste-content-main {
   background-color: #0e1414;
   color: #ffffff;
   text-align: center;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 h1 {
   text-transform: uppercase;
+  font-weight: 300;
+  font-size: 30px;
+  padding-bottom: 20px;
+  display: inline-block;
+  border-bottom: 1px solid white;
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 h2 {
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
   text-transform: capitalize;
 }
 p {
   text-transform: capitalize;
+  opacity: 0.8;
+}
+section {
+  padding: 30px 0px;
 }
 .row .col-md-4 {
   padding: 4px;
@@ -27,9 +70,21 @@ p {
   padding: 0px;
   margin: 0px;
 }
+.row .col-md-4 .custom-taste-card .card-body img {
+  padding: 15px 0px;
+}
+.row .col-md-4 .custom-taste-card .card-body .card-text {
+  padding: 10px 0px;
+  width: 280px;
+  margin: 0 auto;
+}
 #taste-the-colours-section .container .row .col-md-8 .row .col-6 {
   padding: 0px;
 }
 #taste-the-colours-section .container .row .col-md-8 .row .col-6 img {
   padding: 5px;
+}
+#taste-the-colours-section .container .row .col-md-4 h1 {
+  margin-top: 0px;
+  text-align: left;
 }
