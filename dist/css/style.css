@@ -1,5 +1,5 @@
 /*
- grunt-basic 2018-07-18 
+ grunt-basic 2018-07-21 
 */
 @font-face {
   font-family: 'Roboto';
@@ -115,4 +115,54 @@ img:hover {
 }
 #taste-the-colours-section .container .row .col-md-4 h1 {
   margin-top: 0px;
+}
+.vertically-horizontally-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.9;
+}
+.modal-textbox {
+  display: none;
+  z-index: 1001;
+  opacity: 1;
+  width: 500px;
+  height: 200px;
+  background-color: white;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-textbox h1,
+.modal-textbox p {
+  color: black;
+}
+.modal-textbox .close {
+  right: 0;
+  top: 0;
+  font-size: 40px;
+  margin: 10px;
+  color: lightgrey;
+  position: absolute;
+  opacity: 1;
+}
+.modal-textbox .close:hover {
+  color: black;
+  cursor: pointer;
+}
+.img-fluid {
+  cursor: pointer;
 }
