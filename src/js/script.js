@@ -1,37 +1,53 @@
+// Logging anchor clicks
 document.onclick = function (event) {
     console.log(event.target);
 }
 
-
-
 $(document).ready(function () {
-    // Modal
+    var clickable = false;
+    // Modal //
+    // Open Modal
+    $(".img-fluid").click(function () {
+        var clickedIndex = $(".img-fluid").index(this);
 
-    var fluidImages = document.getElementsByClassName("img-fluid");
+        $(".modal-container:eq(0)").css("visibility", "visible");
 
-    var modalContainer = document.getElementsByClassName("modal-container")[0];
-    var closeButton = document.getElementsByClassName("close")[0];
+        $(".modal-container:eq(0)").css("opacity", "0.9");
+
+        $(".modal-textbox:eq(" + clickedIndex + ")").show();
+        $(".modal-textbox:eq(" + clickedIndex + ")").animate({
+            height: "200px"
+        }, "easein", function () {
+            clickable = true;
+        });
+    });
 
 
-    var modalTextbox = document.getElementsByClassName("modal-textbox");
+    // Close Modal
+    $(".modal-container:eq(0)").click(function () {
+        closeModal()
+    });
 
-    for (var i = 0; i < fluidImages.length; i++) {
-        console.log(i)
-        fluidImages[i].onclick = function () {
-            console.log(i);
-            modalContainer.style.display = "block";
+    $(".close").click(function () {
+        closeModal()
+    });
 
-            modalTextbox[0].style.display = "block";
-        }
+    function closeModal() {
+        if (clickable) {
+            clickable = false;
+            var transitionDurationInteger = ($(".modal-container:eq(0)").css("transition-duration").substring(0, $(".modal-container:eq(0)").css("transition-duration").length - 1)) * 1000
+            $(".modal-textbox").animate({
+                height: "0px"
+            }, 200);
 
-        modalContainer.onclick = function () {
-            modalContainer.style.display = "none";
-            modalTextbox[0].style.display = "none";
-        }
+            setTimeout(function () {
+                $(".modal-textbox").hide()
+            }, 200);
 
-        closeButton.onclick = function () {
-            modalContainer.style.display = "none";
-            modalTextbox[0].style.display = "none";
+            $(".modal-container:eq(0)").css("opacity", "0");
+            setTimeout(function () {
+                $(".modal-container:eq(0)").css("visibility", "hidden");
+            }, transitionDurationInteger);
         }
     }
-})
+});
