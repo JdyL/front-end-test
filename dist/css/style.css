@@ -61,9 +61,11 @@ section {
 .bolded-eyecatch {
   font-weight: 500;
   font-size: 18px;
+  opacity: 1;
 }
 .red-text {
-  color: #e94d4d;
+  opacity: 1;
+  color: #ba142d;
   font-size: 16px;
   font-weight: 500;
   line-height: 1px;
