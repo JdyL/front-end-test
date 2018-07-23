@@ -1,5 +1,5 @@
 /*
- grunt-basic 2018-07-23 
+ grunt-basic 2018-07-24 
 */
 @font-face {
   font-family: 'Roboto';
@@ -53,7 +53,6 @@ h2 {
   text-transform: capitalize;
 }
 p {
-  text-transform: capitalize;
   opacity: 0.8;
 }
 section {
@@ -93,7 +92,7 @@ img:hover {
 }
 .row .col-md-4 .custom-taste-card .card-body .card-text {
   padding: 10px 0px;
-  width: 280px;
+  max-width: 280px;
   margin: 0 auto;
 }
 #taste-the-colours-section .container .row .col-md-8 {
